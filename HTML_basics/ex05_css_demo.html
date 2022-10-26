@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			img {
+				width: 20%;
+			}
+			.cat-picture-rounded {
+				border-radius: 30px;
+			}
+			.cat-picture-circle {
+				border-radius: 100px;
+			}
+			.cat-picture-frame {
+				border-style: solid;
+				border-width: 2px;
+				border-color: #08d3f5;
+				padding-top: 10px;
+				padding-bottom: 20px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.cat-picture-frame-with-shadow {
+				border-style: solid;
+				border-width: 2px;
+				border-color: #08d3f5;
+				padding-top: 10px;
+				padding-bottom: 20px;
+				padding-left: 10px;
+				padding-right: 10px;
+				box-shadow: 10px 10px #08d3f5;
+			}
+			.customButton {
+				background-color: blue;
+				color: white;
+				width: 100px;
+				height: 100px;
+				border-radius: 20px;
+				font-size: 30px;
+			}
+
+			.profile {
+				width: 200px;
+				display: inline-block;
+				margin-top: 20px;
+				border-style: solid;
+			}
+			.profile-picture {
+				width: 200px;
+				object-fit: cover;
+				margin-top: 20px;
+			}
+			.profile-button {
+				width: 100px;
+				background-color: gray;
+				color: white;
+				font-size: 12px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				margin-left: 50px;
+			}
+			.profile-name {
+				color: green;
+				font-size: 20px;
+				text-align: center;
+			}
+			.profile-age {
+				color: white;
+				font-size: 15px;
+				text-align: center;
+				background-color: grey;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			Eredeti
+			<img src="./resources/cat.jpeg" />
+		</div>
+
+		<div>
+			Kerekített
+			<img class="cat-picture-rounded" src="./resources/cat.jpeg" />
+		</div>
+
+		<div>
+			Kör
+			<img class="cat-picture-circle" src="./resources/cat.jpeg" />
+		</div>
+
+		<div>
+			Keret
+			<img class="cat-picture-frame" src="./resources/cat.jpeg" />
+		</div>
+
+		<div>
+			Árnyékos
+			<img class="cat-picture-frame-with-shadow" src="./resources/cat.jpeg" />
+		</div>
+
+		<div>
+			<a href="http://google.com">
+				<button class="customButton">Gomb</button>
+			</a>
+		</div>
+
+		<div class="profile">
+			<img class="profile-picture" src="./resources/cat.jpeg" />
+			<p class="profile-name">Cirmi</p>
+			<p class="profile-age">5 éves</p>
+			<button class="profile-button">Megmentem</button>
+		</div>
+
+		<div class="profile">
+			<img class="profile-picture" src="./resources/cat.jpeg" />
+			<p class="profile-name">Garfield</p>
+			<p class="profile-age">3 éves</p>
+			<button class="profile-button">Megmentem</button>
+		</div>
+
+		<div class="profile">
+			<img class="profile-picture" src="./resources/cat.jpeg" />
+			<p class="profile-name">Jancsika</p>
+			<p class="profile-age">15 éves</p>
+			<button class="profile-button">Megmentem</button>
+		</div>
+	</body>
+</html>
