@@ -4,129 +4,173 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Feladat 5 - CSS</title>
+
 		<style>
+			body {
+				background-image: url(./resources/background.png);
+			}
 			img {
 				width: 20%;
 			}
+
 			.cat-picture-rounded {
-				border-radius: 30px;
+				border-radius: 15px;
 			}
+
 			.cat-picture-circle {
 				border-radius: 100px;
 			}
+
 			.cat-picture-frame {
+				border-width: 1px;
 				border-style: solid;
-				border-width: 2px;
-				border-color: #08d3f5;
-				padding-top: 10px;
-				padding-bottom: 20px;
-				padding-left: 10px;
-				padding-right: 10px;
+				border-color: rgb(200, 200, 200);
+				padding-top: 12px;
+				padding-bottom: 12px;
+				padding-left: 15px;
+				padding-right: 15px;
+				border-radius: 8px;
 			}
-			.cat-picture-frame-with-shadow {
-				border-style: solid;
-				border-width: 2px;
-				border-color: #08d3f5;
-				padding-top: 10px;
-				padding-bottom: 20px;
-				padding-left: 10px;
-				padding-right: 10px;
-				box-shadow: 10px 10px #08d3f5;
+
+			.cat-picture-shadow {
+				border: none;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				padding-left: 15px;
+				padding-right: 15px;
+				border-radius: 30px;
+				box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 			}
-			.customButton {
-				background-color: blue;
+
+			.search-button {
+				background-color: rgb(10, 102, 194);
 				color: white;
-				width: 100px;
-				height: 100px;
-				border-radius: 20px;
-				font-size: 30px;
+				border: none;
+				font-size: 20px;
+				width: 400px;
+				padding-top: 16px;
+				padding-bottom: 16px;
+				border-radius: 30px;
+			}
+
+			p {
+				font-family: Arial;
+				margin-top: 0;
+				margin-bottom: 0;
 			}
 
 			.profile {
 				width: 200px;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 				display: inline-block;
-				margin-top: 20px;
-				border-style: solid;
+				margin-right: 15px;
 			}
+
 			.profile-picture {
 				width: 200px;
+				height: 200px;
 				object-fit: cover;
-				margin-top: 20px;
+				margin-bottom: 12px;
 			}
-			.profile-button {
-				width: 100px;
-				background-color: gray;
-				color: white;
-				font-size: 12px;
-				margin-top: 20px;
-				margin-bottom: 20px;
-				margin-left: 50px;
-			}
+
 			.profile-name {
-				color: green;
-				font-size: 20px;
-				text-align: center;
+				font-size: 18px;
+				font-weight: bold;
+				margin-left: 8px;
+				margin-bottom: 4px;
 			}
+
 			.profile-age {
+				color: rgb(100, 100, 100);
+				margin-left: 8px;
+				margin-bottom: 12px;
+			}
+
+			#profile-age-yellow {
+				color: rgb(100, 100, 100);
+				background: yellow;
+				margin-left: 8px;
+				margin-bottom: 12px;
+			}
+
+			.rescue-button {
+				background-color: rgb(7, 84, 11);
 				color: white;
-				font-size: 15px;
-				text-align: center;
-				background-color: grey;
+				border: none;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius: 4px;
+				font-size: 16px;
+				margin-left: 8px;
+				margin-bottom: 10px;
 			}
 		</style>
 	</head>
+
 	<body>
 		<div>
-			Eredeti
-			<img src="./resources/cat.jpeg" />
+			Original picture
+			<img src="./resources/cat.jpeg" alt="cat picture" />
 		</div>
+		<div>
+			Rounded picture
+			<img
+				class="cat-picture-rounded"
+				src="./resources/cat.jpeg"
+				alt="cat picture"
+			/>
+		</div>
+		<div>
+			Rounded picture
+			<img
+				class="cat-picture-circle"
+				src="./resources/cat.jpeg"
+				alt="cat picture"
+			/>
+		</div>
+		<div>
+			Rounded picture
+			<img
+				class="cat-picture-frame"
+				src="./resources/cat.jpeg"
+				alt="cat picture"
+			/>
+		</div>
+		<div>
+			Rounded picture with shadow
+			<img
+				class="cat-picture-shadow"
+				src="./resources/cat.jpeg"
+				alt="cat picture"
+			/>
+		</div>
+
+		<a href="https://letmegooglethat.com/?q=cat" target="_blank">
+			<button type="button" class="search-button">Kattanj rám.</button>
+		</a>
 
 		<div>
-			Kerekített
-			<img class="cat-picture-rounded" src="./resources/cat.jpeg" />
-		</div>
-
-		<div>
-			Kör
-			<img class="cat-picture-circle" src="./resources/cat.jpeg" />
-		</div>
-
-		<div>
-			Keret
-			<img class="cat-picture-frame" src="./resources/cat.jpeg" />
-		</div>
-
-		<div>
-			Árnyékos
-			<img class="cat-picture-frame-with-shadow" src="./resources/cat.jpeg" />
-		</div>
-
-		<div>
-			<a href="http://google.com">
-				<button class="customButton">Gomb</button>
-			</a>
-		</div>
-
-		<div class="profile">
-			<img class="profile-picture" src="./resources/cat.jpeg" />
-			<p class="profile-name">Cirmi</p>
-			<p class="profile-age">5 éves</p>
-			<button class="profile-button">Megmentem</button>
-		</div>
-
-		<div class="profile">
-			<img class="profile-picture" src="./resources/cat.jpeg" />
-			<p class="profile-name">Garfield</p>
-			<p class="profile-age">3 éves</p>
-			<button class="profile-button">Megmentem</button>
-		</div>
-
-		<div class="profile">
-			<img class="profile-picture" src="./resources/cat.jpeg" />
-			<p class="profile-name">Jancsika</p>
-			<p class="profile-age">15 éves</p>
-			<button class="profile-button">Megmentem</button>
+			<div class="profile">
+				<img class="profile-picture" src="./resources/cat.jpeg" />
+				<p class="profile-name">Cicike</p>
+				<p class="profile-age">2 éves kandúr</p>
+				<button class="rescue-button">Megmentem</button>
+			</div>
+			<div class="profile">
+				<img class="profile-picture" src="./resources/cat.jpeg" />
+				<p class="profile-name">Cirmi</p>
+				<p class="profile-age">5 éves kandúr</p>
+				<button class="rescue-button">Megmentem</button>
+			</div>
+			<div class="profile">
+				<img class="profile-picture" src="./resources/cat.jpeg" />
+				<p class="profile-name">Garfield</p>
+				<p id="profile-age-yellow">12 éves kandúr</p>
+				<button class="rescue-button">Megmentem</button>
+			</div>
 		</div>
 	</body>
 </html>
