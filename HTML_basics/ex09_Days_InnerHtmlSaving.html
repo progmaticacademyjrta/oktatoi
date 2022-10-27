@@ -1,0 +1,26 @@
+<html>
+<head>
+   <title>InnerTextSaving</title>
+   <meta name="description" content="progmatic gyakorlat">
+   <meta charset="UTF-8">
+   <script>
+   function daySelector(day){
+     document.getElementById('textLabel').innerHTML = day + "-t nyomtál.";
+     if(day=='Saturday')
+       document.getElementById(day).style.color = 'red';
+     else
+       document.getElementById(day).style.color = 'green';
+  }
+   </script>
+</head>
+<body>
+   <p id="textLabel">Ez a szöveg bizony meg fog változni...Gombnyomásra!</p>
+   <button id="Monday" type="button" onclick=daySelector('Monday')>Click Me!</button>
+   <button id="Tuesday" type="button" onclick=daySelector('Tuesday')>Click Me!</button>
+   <button id="Wednesday" type="button" onclick=daySelector('Wednesday')>Click Me!</button>
+   <button id="Thursday" type="button" onclick=daySelector('Thursday')>Click Me!</button>
+   <button id="Friday" type="button" onclick=daySelector('Friday')>Click Me!</button>
+   <button id="Saturday" type="button" onclick=daySelector('Saturday')>Click Me!</button>
+   <button id="Sunday" type="button" onclick=daySelector('Sunday')>Click Me!</button>
+</body>
+</html>
