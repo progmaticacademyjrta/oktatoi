@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Javascript Example</title>
+		<meta name="description" content="progmatic gyakorlat" />
+		<meta charset="UTF-8" />
+		<script>
+			window.onload = function () {
+				const myHeading = document.querySelector("h1")
+				myHeading.textContent = "Hello world!"
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="textLabel">
+			Alapértelmezett szöveg ami megváltozik az oldal betöltésekor.
+		</h1>
+
+		<button
+			type="button"
+			onclick="document.getElementById('demo').innerHTML = Date()"
+		>
+			Click me to display Date and Time.
+		</button>
+
+		<p id="demo"></p>
+	</body>
+</html>
