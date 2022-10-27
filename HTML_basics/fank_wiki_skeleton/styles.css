@@ -1,0 +1,62 @@
+body{
+  font-family:'Courier New', Courier, monospace;
+}
+
+.menu {
+  display: flex;
+  background-color: grey;
+}
+
+.menuOptions{
+  display: flex;
+}
+
+.leftSection{
+  display: flex;
+}
+
+.sessionControl {
+  margin-left: auto;
+}
+
+#menuImage{
+  width: 50px;
+  height: 50px;
+}
+
+.textInput{
+  height: 30px;
+}
+
+.introduction{
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.introductionText{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.subTitle{
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+
+.divider {
+  margin-top: 0px;
+}
+
+.contentSection{
+  text-align: left;
+}
+
+.contentTable{
+}
+
+.subContent {
+  display: flex;
+}
