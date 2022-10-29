@@ -1,0 +1,20 @@
+
+
+.btn {
+  top: 20px;
+  left: 250px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  background-color: gray;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: black;
+  color: greenyellow;
+}
