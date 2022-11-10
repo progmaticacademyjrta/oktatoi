@@ -9,5 +9,6 @@ public class Main {
 
         evszam = 2024;
         System.out.print("hello progmatic " + evszam);
+        System.out.println("Az ez utáni tartalom már új sorba kerül a println miatt");
     }
 }
