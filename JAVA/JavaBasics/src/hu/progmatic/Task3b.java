@@ -8,8 +8,6 @@ public class Task3b {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
 
-        a = a *3;
-
         System.out.println("Give me another number:");
         int b = scanner.nextInt();
 
