@@ -60,7 +60,7 @@ public class JavaOperators {
         System.out.println("a5 after -= 7 is " + a5);
 
         int a6 = 3;
-        a6 *= 6;
+        a6 *= 6;   // a6=a6*6
         System.out.println("a6 after *= 6 is " + a6);
 
         String hello = "Hello";

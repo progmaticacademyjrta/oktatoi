@@ -2,7 +2,7 @@ package hu.progmatic;
 
 import java.util.Scanner;
 
-public class Task2 {
+public class Task2b {
     public static void main(String[] args) {
         System.out.println("Give me a number:");
         Scanner scanner = new Scanner(System.in);
