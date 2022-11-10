@@ -1,6 +1,6 @@
 package hu.progmatic;
 
-public class Main {
+public class Variables {
 
     public static void main(String[] args) {
         String tanfolyam = "Jr. Autom.";
