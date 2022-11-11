@@ -1,5 +1,3 @@
-package hu.progmatic;
-
 import java.util.Random;
 
 public class RandomGenerator {

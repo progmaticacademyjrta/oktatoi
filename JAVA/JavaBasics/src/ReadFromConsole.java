@@ -1,6 +1,3 @@
-package hu.progmatic;
-
-
 import java.util.Scanner;
 
 public class ReadFromConsole {
