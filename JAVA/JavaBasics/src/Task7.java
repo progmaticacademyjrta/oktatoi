@@ -7,6 +7,7 @@ public class Task7 {
         int dayOfWeek = scanner.nextInt();
 
         // Szelekciók 1-1 feltétellel
+        /*
         if (dayOfWeek == 1) {
             System.out.println("Ez nem a Te napod, majd talán holnap");
         } else if (dayOfWeek == 2) {
@@ -24,6 +25,7 @@ public class Task7 {
         } else {
             System.out.println("Rerun and give number 1-7, please");
         }
+        */
 
         // Szelekciók VAGY feltételekkel
         if (dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 7) {
