@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Task7 {
+public class Task7a {
     public static void main(String[] args) {
         System.out.println("Which day is today? 1-7");
         Scanner scanner = new Scanner(System.in);
