@@ -22,7 +22,7 @@ public class Task7 {
         } else if (dayOfWeek == 7) {
             System.out.println("Ez nem a Te napod, majd talán holnap");
         } else {
-            System.out.println("Stupid boy/girl. Between 1-7");
+            System.out.println("Rerun and give number 1-7, please");
         }
 
         // Szelekciók VAGY feltételekkel
@@ -31,7 +31,7 @@ public class Task7 {
         } else if (dayOfWeek == 4 || dayOfWeek == 5 || dayOfWeek == 6) {
             System.out.println("Italos nap van, ide a citromos sört de gyorsan");
         } else {
-            System.out.println("Stupid boy/girl. Between 1-7");
+            System.out.println("Rerun and give number 1-7, please");
         }
     }
 }
