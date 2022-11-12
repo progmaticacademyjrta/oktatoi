@@ -11,11 +11,16 @@ public class Task15 {
         int player1Total = 0, player2Total = 0;
         Random randomGenerator = new Random();
         int round = 1;
-        while (round <= 3) {
+        while (round <= 4) {
             int player1ActualNumber = randomGenerator.nextInt(6) + 1;
             int player2ActualNumber = randomGenerator.nextInt(6) + 1;
-            player1Total = player1Total + player1ActualNumber;
-            player2Total = player2Total + player2ActualNumber;
+            if (round == 4) {
+                player1Total = player1Total + player1ActualNumber * 2;
+                player2Total = player2Total + player2ActualNumber * 2;
+            } else {
+                player1Total = player1Total + player1ActualNumber;
+                player2Total = player2Total + player2ActualNumber;
+            }
             round++;
         }
 
