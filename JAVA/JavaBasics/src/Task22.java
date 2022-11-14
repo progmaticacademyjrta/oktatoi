@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Task22 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        Scanner scanRerun = new Scanner(System.in);
+        String decision;
+        //boolean rerun = false;
 
         do {
             System.out.println("Give the operator first? (+ - * / pumped)");
@@ -26,11 +29,15 @@ public class Task22 {
                 System.out.println("Unsupported operator. Please re-run!");
             }
 
-            if () {
-
+            System.out.println("Do you want to re-run? (Y/N)");
+            decision = scanRerun.nextLine();
+            if (decision.equals("Y")) {
+                System.out.println("Got it. Rerun...");
+                //rerun=true;
             } else {
-
+                System.out.println("Ok, thanks for using me.");
+                //rerun=false;
             }
-        } while ();
+        } while (decision.equals("Y"));
     }
 }
