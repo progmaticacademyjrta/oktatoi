@@ -8,8 +8,10 @@ public class Task15 {
         String player1 = scanner.nextLine();
         System.out.println("2st player name:");
         String player2 = scanner.nextLine();
+
         int player1Total = 0, player2Total = 0;
         Random randomGenerator = new Random();
+
         int round = 1;
         while (round <= 4) {
             int player1ActualNumber = randomGenerator.nextInt(6) + 1;
