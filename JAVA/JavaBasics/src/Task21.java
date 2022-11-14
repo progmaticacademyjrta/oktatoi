@@ -20,6 +20,7 @@ public class Task21 {
                     (aoldal + coldal) > boldal &&
                     (boldal + coldal) > aoldal) {
                 System.out.println("Triangle");
+                rerun=false;
             } else {
                 System.out.println("Not a triangle");
             }
