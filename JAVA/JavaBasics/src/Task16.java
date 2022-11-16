@@ -23,7 +23,16 @@ public class Task16 {
         }
         System.out.println("computerHand: " + computerHand);
 
-        // WHO WIN?
-
+        if (userHand.equals(computerHand)) {
+            System.out.println("Draw");
+        } else if (userHand.equals("Rock") && userHand.equals("Scissors")) {
+            System.out.println("You win");
+        } else if (userHand.equals("Paper") && userHand.equals("Rock")) {
+            System.out.println("You win");
+        } else if (userHand.equals("Scissors") && userHand.equals("Paper")) {
+            System.out.println("You win");
+        } else {
+            System.out.println("Computer win");
+        }
     }
 }
