@@ -7,18 +7,24 @@ public class Task23 {
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.nextInt(5);
 
-        if (randomNumber == 0) {
-            System.out.println("Minden nap új nap.");
-        } else if (randomNumber == 1) {
-            System.out.println("Aki korán kel, aranyat lel");
-        } else if (randomNumber == 2) {
-            System.out.println("Jobb ma két sör, mint holnap egy");
-        } else if (randomNumber == 3) {
-            System.out.println("A kemény munka mindig kifizetődik");
-        } else if (randomNumber == 4) {
-            System.out.println("Az élet egy játék, de játszani tudni kell");
-        } else {
-            System.out.println("Nem lehetséges opció, mert minden lehetséges szam fentebb kezelve van.");
+        switch (randomNumber) {
+            case 0:
+                System.out.println("Minden nap új nap.");
+                break;
+            case 1:
+                System.out.println("Aki korán kel, aranyat lel");
+                break;
+            case 2:
+                System.out.println("Jobb ma két sör, mint holnap egy");
+                break;
+            case 3:
+                System.out.println("A kemény munka mindig kifizetődik");
+                break;
+            case 4:
+                System.out.println("Az élet egy játék, de játszani tudni kell");
+                break;
+            default:
+                System.out.println("Nem lehetséges opció, mert minden lehetséges szam fentebb kezelve van.");
         }
     }
 }
