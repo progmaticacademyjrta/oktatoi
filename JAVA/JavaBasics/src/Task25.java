@@ -14,5 +14,7 @@ public class Task25 {
         } else {
             System.out.println("Rerun and give number 1-7, please");
         }
+
+        // TASK - rewrite the expression above with the usage of switch-case
     }
 }
