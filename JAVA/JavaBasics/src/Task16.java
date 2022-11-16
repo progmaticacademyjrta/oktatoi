@@ -25,11 +25,11 @@ public class Task16 {
 
         if (userHand.equals(computerHand)) {
             System.out.println("Draw");
-        } else if (userHand.equals("Rock") && userHand.equals("Scissors")) {
+        } else if (userHand.equals("Rock") && computerHand.equals("Scissors")) {
             System.out.println("You win");
-        } else if (userHand.equals("Paper") && userHand.equals("Rock")) {
+        } else if (userHand.equals("Paper") && computerHand.equals("Rock")) {
             System.out.println("You win");
-        } else if (userHand.equals("Scissors") && userHand.equals("Paper")) {
+        } else if (userHand.equals("Scissors") && computerHand.equals("Paper")) {
             System.out.println("You win");
         } else {
             System.out.println("Computer win");
