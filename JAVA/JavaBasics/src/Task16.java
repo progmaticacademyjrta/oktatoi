@@ -20,6 +20,7 @@ public class Task16 {
                 break;
             case 2:
                 computerHand = "Scissors";
+                break;
             default:
                 computerHand = "Invalid";
         }
