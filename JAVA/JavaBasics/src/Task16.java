@@ -18,8 +18,10 @@ public class Task16 {
             case 1:
                 computerHand = "Paper";
                 break;
-            default:
+            case 2:
                 computerHand = "Scissors";
+            default:
+                computerHand = "Invalid";
         }
         System.out.println("computerHand: " + computerHand);
 
