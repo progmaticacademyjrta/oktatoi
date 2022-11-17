@@ -1,0 +1,37 @@
+public class Arrays {
+    public static void main(String[] args) {
+        // létrehozás méret és értékadás nélkül
+        int[] numbersEmpty;
+
+        // létrehozás értékadással
+        int[] numbersWithValues = {1, 34, 2, 21};
+        double[] numbersWithValues2 = {1.7, 34, 7, 21};
+        String[] namesWithValues = {"Zsolt", "Csaba"};
+        char[] charWithValues = {'h', 'a'};
+        boolean[] booleanWithValues = {true, true, false, true};
+
+        // kiolvasás - a 0. indexű, azaz első elem a tömbben
+        System.out.println("First element of array: " + numbersWithValues[0]);
+        // length attributum megmondja milyen hosszú az adott tömb
+        System.out.println("Length of array: " + numbersWithValues.length);
+
+        // létrehozás értékadás nélkül, csak a méret megadásával
+        double[] numberWithoutValues2 = new double[2];
+        String[] numberWithoutValues3 = new String[5];
+
+        // érték beállítása a 0. indexen, azaz az első elemnek
+        numberWithoutValues3[0] = "Kiskacsa";
+
+        // for ciklus használata a tomb bejarasara és értékeinek beallitasara
+        int[] numbers = new int[3];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i;
+        }
+
+        // for ciklus használata a tomb bejarasara és értékeinek kiírására
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Array element: " + numbers[i]);
+        }
+    }
+}
+
