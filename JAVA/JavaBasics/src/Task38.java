@@ -13,6 +13,10 @@ public class Task38 {
             favoriteMovies.add(userInput);
         }
 
-        System.out.println("List saved: " + favoriteMovies);
+        System.out.println("List saved: ");
+        for (String movie : favoriteMovies) {
+            System.out.print(movie + ", ");
+        }
+
     }
 }
