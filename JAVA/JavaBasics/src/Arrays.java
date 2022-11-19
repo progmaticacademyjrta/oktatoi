@@ -32,6 +32,14 @@ public class Arrays {
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("Array element: " + numbers[i]);
         }
+
+        // v2 array értékei visszafele
+        for (int i = numbers.length-1; i >= 0; i--) {
+            System.out.println("Array element: " + numbers[i]);
+        }
+
+        // legutolsó eleme a tömbnek
+        System.out.println("Array element: " + numbers[numbers.length]);
     }
 }
 
