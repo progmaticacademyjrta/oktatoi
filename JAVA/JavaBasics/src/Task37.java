@@ -24,5 +24,19 @@ public class Task37 {
             // tomb esetén favoriteFruits[i], List esetén favoriteFruits.get(i)
             System.out.println(favoriteFruits.get(i));
         }
+
+        System.out.println("With while:");
+        int i = 0;
+        while (i < favoriteFruits.size()) {
+            System.out.println(favoriteFruits.get(i));
+            i++;
+        }
+
+        System.out.println("With do-while:");
+        i = 0;
+        do {
+            System.out.println(favoriteFruits.get(i));
+            i++;
+        } while (i < favoriteFruits.size());
     }
 }
