@@ -34,12 +34,26 @@ public class Arrays {
         }
 
         // v2 array értékei visszafele
-        for (int i = numbers.length-1; i >= 0; i--) {
+        for (int i = numbers.length - 1; i >= 0; i--) {
             System.out.println("Array element: " + numbers[i]);
         }
 
         // legutolsó eleme a tömbnek
         System.out.println("Array element: " + numbers[numbers.length]);
+
+
+        // for vs foreach
+        int[] numbers2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        //for
+        for (int i = 0; i < numbers2.length; i++) {
+            System.out.println("Count is: " + numbers2[i]);
+        }
+
+        //foreach
+        for (int item : numbers2) {
+            System.out.println("Count is: " + item);
+        }
     }
 }
 
