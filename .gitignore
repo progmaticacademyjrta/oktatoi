@@ -1,3 +1,7 @@
 /JAVA/*/.idea/
 /JAVA/*/out/
+*/.idea/
+*/out/
 *.iml
+*.class
+.idea/
