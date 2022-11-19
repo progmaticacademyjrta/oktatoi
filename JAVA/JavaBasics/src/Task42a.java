@@ -2,13 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Task42 {
+public class Task42a {
     public static void main(String[] args) {
         /*
          Írjatok programot, amely a megadott testhőmérsékleti adatokból, amit a felhasználó rögzített,
 
          a) listában tárolást követően kiszámolja mennyi volt az átlagos testhő
-         b) hányszor volt lázas a bevitt adatok alapján a delikvens
 
          Az adatokat az utolsó 3 nap, napi 3 (reggeli, napközbeni és esti) adataival kell mindig rögzíteni,
          tehát mindig fix 9 testhőmérsékleti adatot.
