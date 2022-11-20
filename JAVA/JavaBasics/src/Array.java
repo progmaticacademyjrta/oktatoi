@@ -1,4 +1,4 @@
-public class Arrays {
+public class Array {
     public static void main(String[] args) {
         // létrehozás méret és értékadás nélkül
         int[] numbersEmpty;
@@ -40,7 +40,6 @@ public class Arrays {
 
         // legutolsó eleme a tömbnek
         System.out.println("Array element: " + numbers[numbers.length]);
-
 
         // for vs foreach
         int[] numbers2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
