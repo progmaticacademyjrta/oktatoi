@@ -25,30 +25,30 @@ public class Task42b {
         double sumTemperature = 0;
         int countFever = 0;
 
+        // data feed
         for (int i = 0; i < tempCount; i++) {
             System.out.println("Add a temperature: ");
             double tempInput = scanner.nextDouble();
-
             if (temperatureList.contains(tempInput)) {
                 System.out.println("Ez az adat szerepel már, biztos hozzá akarod adni megint? (Y/N)");
                 String decision = scanner2.nextLine();
-                if (decision.equals("Y")) {
+                if (decision.equals("Y"))
                     temperatureList.add(tempInput);
-                    sumTemperature += tempInput;
-                    if (38 < tempInput) {
-                        countFever++;
-                    }
-                }else{
-                   i--;
-                }
+                else
+                    i--;
             } else {
                 temperatureList.add(tempInput);
-                sumTemperature += tempInput;
-                if (38 < tempInput) {
-                    countFever++;
-                }
             }
         }
+
+        // calculation
+        for (double temp : temperatureList) {
+            sumTemperature += temp;
+            if (38 < temp) {
+                countFever++;
+            }
+        }
+
         System.out.println(temperatureList);
         System.out.println("Average temperature: " + sumTemperature / temperatureList.size());
         System.out.println("Count of fever occasions: " + countFever);
