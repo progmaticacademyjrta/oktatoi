@@ -18,7 +18,10 @@ public class Task46 {
         List<Integer> notWinnerNumbers = new ArrayList<>();
 
         for (int i = 1; i <= 90; i++) {
-            // HA i benne van a winnerNumbers AKKOR i-t hozzáadom a notWinnerNumbers
+            // HA i NINCS benne van a winnerNumbers-be AKKOR i-t hozzáadom a notWinnerNumbers-be
+            if (!winnerNumbers.contains(i)) {
+                notWinnerNumbers.add(i);
+            }
         }
 
         System.out.println(notWinnerNumbers);
