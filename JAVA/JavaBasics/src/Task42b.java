@@ -12,21 +12,41 @@ public class Task42b {
          Az adatokat az utolsó 3 nap, napi 3 (reggeli, napközbeni és esti) adataival kell mindig rögzíteni,
          tehát mindig fix 9 testhőmérsékleti adatot.
          */
-        System.out.println("Add the body temperature for the last 3 days and 3 for each days (last 9 in overall): ");
         Scanner scanner = new Scanner(System.in);
+        Scanner scanner2 = new Scanner(System.in);
 
+        System.out.println("How many data would you like to add: ");
+        int tempCount = scanner.nextInt();
+
+        System.out.println("Add the body temperature for the last days and for each days: ");
+        scanner = new Scanner(System.in);
         List<Double> temperatureList = new ArrayList<>();
 
         double sumTemperature = 0;
         int countFever = 0;
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < tempCount; i++) {
             System.out.println("Add a temperature: ");
             double tempInput = scanner.nextDouble();
-            temperatureList.add(tempInput);
-            sumTemperature += tempInput;
-            if (38 < tempInput) {
-                countFever++;
+
+            if (temperatureList.contains(tempInput)) {
+                System.out.println("Ez az adat szerepel már, biztos hozzá akarod adni megint? (Y/N)");
+                String decision = scanner2.nextLine();
+                if (decision.equals("Y")) {
+                    temperatureList.add(tempInput);
+                    sumTemperature += tempInput;
+                    if (38 < tempInput) {
+                        countFever++;
+                    }
+                }else{
+                   i--;
+                }
+            } else {
+                temperatureList.add(tempInput);
+                sumTemperature += tempInput;
+                if (38 < tempInput) {
+                    countFever++;
+                }
             }
         }
         System.out.println(temperatureList);
