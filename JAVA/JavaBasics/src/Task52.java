@@ -22,12 +22,16 @@ public class Task52 {
         Set<Integer> computerNumbers = new HashSet<>();
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        String userInput = "";
 
         while (computerNumbers.size() != 3) {
             int number = random.nextInt(10);
             System.out.println(number);
             computerNumbers.add(number);
+        }
+
+        int userInput = 0;
+        while (?????){
+            userInput = scanner.nextInt();
         }
 
         System.out.println(computerNumbers);
