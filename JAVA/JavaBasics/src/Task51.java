@@ -21,7 +21,7 @@ public class Task51 {
             if (!userInput.equals("x"))
                 checklist.add(userInput);
         }
-        
+
         // while - x-et nem adja hozzá a HashSet-hez
         userInput = "";
         boolean isInputActivity = true;
