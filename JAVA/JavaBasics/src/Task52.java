@@ -22,6 +22,7 @@ public class Task52 {
         Set<Integer> computerNumbers = new HashSet<>();
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
+        int round = 0;
 
         while (computerNumbers.size() != 3) {
             int number = random.nextInt(10);
@@ -30,10 +31,15 @@ public class Task52 {
         }
 
         int userInput = 0;
-        while (?????){
+        while (!computerNumbers.isEmpty()) {
             userInput = scanner.nextInt();
+            round++;
+            if (computerNumbers.contains(userInput)) {
+                computerNumbers.remove(userInput);
+                System.out.println("Talált, még " + computerNumbers.size() + " szám, amit meg kell keresned");
+            }
         }
-
+        System.out.println("Gratulálunk, " + round + " kör kellett a sikerhez");
         System.out.println(computerNumbers);
     }
 }
