@@ -3,6 +3,14 @@ import java.util.Map;
 
 public class Task53 {
     public static void main(String[] args) {
+        /**
+         * Készítsünk egy Map-et kedvenc gyümölcsökkel.
+         * Adjunk hozzá a listához legalább 7 gyümölcsöt és egy értéket,
+         * hogy mennyire szeretjük. Ez az érték 1-3 között lehet,
+         * mely esetén a 3 amit jobban szeretünk.
+         *
+         * Foreach ciklus segítségével írassuk ki az elemeit a képernyőre egymás alá.
+         */
         HashMap<String, Integer> fruitsMap = new HashMap<>();
 
         fruitsMap.put("melon",2);
