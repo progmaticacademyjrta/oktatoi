@@ -22,15 +22,30 @@ public class Task55 {
         Scanner scanner = new Scanner(System.in);
         HashMap<String, Integer> shoppingList = new HashMap<>();
 
-        for (int i = 0; i < 7; i++) {
+        boolean wantNewItem = true;
+        int sumOfItems = 0;
+
+        while (wantNewItem) {
             System.out.println("Please add the name of the item: ");
             String name = scanner.nextLine();
             System.out.println("Please add the quantity of the item: ");
             int itemCount = Integer.parseInt(scanner.nextLine());
-            if (shoppingList.containsKey(name))
+            if (shoppingList.containsKey(name)){
                 System.out.println("Quantity of the item has been updated");
+                sumOfItems -= shoppingList.get(name);
+            }
+            sumOfItems += itemCount;
             shoppingList.put(name, itemCount);
+            if (3 <= shoppingList.size()) {
+                System.out.println("Do you want to add a new item? Y/N");
+                String decision = scanner.nextLine();
+                if (!decision.equals("Y"))
+                    wantNewItem = false;
+            }
         }
         System.out.println(shoppingList);
+        System.out.println("Count of product: " + shoppingList.size());
+        System.out.println("Quantity of items: " + sumOfItems);
+
     }
 }
