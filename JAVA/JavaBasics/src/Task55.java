@@ -25,8 +25,10 @@ public class Task55 {
         for (int i = 0; i < 7; i++) {
             System.out.println("Please add the name of the item: ");
             String name = scanner.nextLine();
-            System.out.println("Please add the count of the item: ");
+            System.out.println("Please add the quantity of the item: ");
             int itemCount = Integer.parseInt(scanner.nextLine());
+            if (shoppingList.containsKey(name))
+                System.out.println("Quantity of the item has been updated");
             shoppingList.put(name, itemCount);
         }
         System.out.println(shoppingList);
