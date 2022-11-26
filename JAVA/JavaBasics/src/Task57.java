@@ -13,19 +13,11 @@ public class Task57 {
                 bookCountMap.put(bookTitle, 1);
             }
         }
-        // task d - foreach to collect books with 4 count
-        List<String> bookWithCountFour = new ArrayList<>();
+
+        // task d - foreach to override books with 4 count to 3
         for (Map.Entry mapElement : bookCountMap.entrySet()) {
-            if ((int) mapElement.getValue() == 4) {
-                bookWithCountFour.add((String) mapElement.getKey());
-            }
-        }
-        // task d - foreach to override book count with 4 count -- next level
-        for (Map.Entry mapElement : bookCountMap.entrySet()) {
-            for (String title : bookWithCountFour) {
-                if (bookCountMap.containsKey(title))
-                    mapElement.setValue(3);
-            }
+            if (bookCountMap.containsValue(4))
+                bookCountMap.put((String) mapElement.getKey(), 3);
         }
 
         // task c - foreach to collect books with 1 count
@@ -35,6 +27,7 @@ public class Task57 {
                 bookWithCountOne.add((String) mapElement.getKey());
             }
         }
+
         // task c - foreach to remove saved books with 1 count
         for (String bookTitle : bookWithCountOne) {
             bookCountMap.remove(bookTitle);
