@@ -29,14 +29,17 @@ public class Task58 {
                 restaurantVoteResultsMap.put(restaurant, 1);
             }
         }
+        // task c - remove Essencia from the result Map
+        restaurantVoteResultsMap.remove("Essencia");
 
         // task a - foreach for println
         for (Map.Entry mapElement : restaurantVoteResultsMap.entrySet()) {
             System.out.println(mapElement.getKey() + " - " + mapElement.getValue() + " szavazat");
         }
 
-        // task c - remove Essencia from the result Map
-        
+        // task d - add extra votes for Stand
+        ???????
+        System.out.println(restaurantVoteResultsMap);
 
         // task b - count of restaurants and count of votes
         System.out.println("-----------------");
