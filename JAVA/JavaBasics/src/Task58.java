@@ -35,5 +35,16 @@ public class Task58 {
             System.out.println(mapElement.getKey() + " - " + mapElement.getValue() + " szavazat");
         }
 
+        // task c - remove Essencia from the result Map
+        
+
+        // task b - count of restaurants and count of votes
+        System.out.println("-----------------");
+        System.out.println("Count of restaurants: " + restaurantVoteResultsMap.size());
+        int sumOfVotes = 0;
+        for (Map.Entry mapElement : restaurantVoteResultsMap.entrySet()) {
+            sumOfVotes += (int) mapElement.getValue();
+        }
+        System.out.println("Count of the votes: " + sumOfVotes);
     }
 }
