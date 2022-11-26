@@ -22,14 +22,19 @@ public class Task56 {
             String billName = scanner.nextLine();
             System.out.println("Please add the value of the bill: ");
             int billValue = Integer.parseInt(scanner.nextLine());
-            //sumOfBills += billValue;   // version 1
+            //sumOfBills += billValue;   // version 1 for sumOfBills
             billsMap.put(billName, billValue);
-            // ??????
+            // version 1 for 0 value remove
+            if(billValue==0)
+                billsMap.remove(billName);
         }
 
-        // version 2
+        // version 2 for sumOfBills
         int sumOfBills = 0;
         for (String itemName : billsMap.keySet()) {
+            // version 2 for 0 value remove
+            if (billsMap.get(itemName)==0)
+                billsMap.remove(itemName);
             sumOfBills += billsMap.get(itemName);
         }
 
