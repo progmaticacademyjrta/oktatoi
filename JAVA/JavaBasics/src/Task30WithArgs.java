@@ -1,6 +1,12 @@
 public class Task30WithArgs {
     public static void main(String[] args) {
-        String[] weekdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+        //String[] weekdays = {args[0], args[1], args[2], args[3], args[4], args[5], args[6]};
+
+        String[] weekdays = new String[7];
+        // Write all of the argument to the console
+        for (int i = 0; i < args.length; i++) {
+            weekdays[i] = args[i];
+        }
 
         /*  Alternative creation
         String[] weekdays2 = new String[7];
