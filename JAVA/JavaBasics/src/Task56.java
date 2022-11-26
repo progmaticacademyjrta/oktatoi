@@ -16,14 +16,23 @@ public class Task56 {
         Scanner scanner = new Scanner(System.in);
         HashMap<String, Integer> billsMap = new HashMap<>();
 
-        while (billsMap.size() < 3){
+        //int sumOfBills = 0;
+        while (billsMap.size() < 3) {
             System.out.println("Please add the name of the bill: ");
             String billName = scanner.nextLine();
             System.out.println("Please add the value of the bill: ");
             int billValue = Integer.parseInt(scanner.nextLine());
-            billsMap.put(billName,billValue);
+            //sumOfBills += billValue;   // version 1
+            billsMap.put(billName, billValue);
+        }
+
+        // version 2
+        int sumOfBills = 0;
+        for (String itemName : billsMap.keySet()) {
+            sumOfBills += billsMap.get(itemName);
         }
 
         System.out.println(billsMap);
+        System.out.println("Sum of the bills: " + sumOfBills);
     }
 }
