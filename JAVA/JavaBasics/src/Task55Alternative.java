@@ -1,7 +1,8 @@
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-public class Task55 {
+public class Task55Alternative {
     public static void main(String[] args) {
         /**
          * Írjatok egy bevásárló lista programot, amely nem csinál mást,
@@ -36,9 +37,7 @@ public class Task55 {
             int itemCount = Integer.parseInt(scanner.nextLine());
             if (shoppingList.containsKey(name)) {
                 System.out.println("Quantity of the item has been updated");
-                sumOfItems -= shoppingList.get(name);
             }
-            sumOfItems += itemCount;
             shoppingList.put(name, itemCount);
             if (3 <= shoppingList.size()) {
                 System.out.println("Do you want to add a new item? Y/N");
@@ -47,6 +46,19 @@ public class Task55 {
                     wantNewItem = false;
             }
         }
+
+        // Összdarabszám kiszámolása ver 1
+        for (Map.Entry mapElement : shoppingList.entrySet()) {
+            System.out.println(mapElement.getKey() + " " + mapElement.getValue());
+            sumOfItems += (int) mapElement.getValue();
+        }
+
+        // Összdarabszám kiszámolása ver 2
+        sumOfItems = 0;
+        for (String itemName : shoppingList.keySet()) {
+            sumOfItems += shoppingList.get(itemName);
+        }
+
         System.out.println(shoppingList);
         System.out.println("Count of product: " + shoppingList.size());
         System.out.println("Quantity of items: " + sumOfItems);
