@@ -38,7 +38,8 @@ public class Task58 {
         }
 
         // task d - add extra votes for Stand
-        ???????
+        int newStandVotes = restaurantVoteResultsMap.get("Stand") + 11;
+        restaurantVoteResultsMap.put("Stand", newStandVotes);
         System.out.println(restaurantVoteResultsMap);
 
         // task b - count of restaurants and count of votes
