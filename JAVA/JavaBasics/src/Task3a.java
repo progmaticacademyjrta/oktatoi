@@ -1,13 +1,10 @@
-import java.util.Scanner;
-
 public class Task3a {
     public static void main(String[] args) {
-        System.out.println("Give me a number:");
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
+        System.out.println("The numbers in the args are: ");
+        System.out.println(args[0] + " and " + args[1]);
 
-        System.out.println("Give me another number:");
-        int b = scanner.nextInt();
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
 
         int result = (a * 3) * b; /// “a” és “b” szorzata, miután megszoroztuk az “a”-t 3
         System.out.println("The result is: " + result);
