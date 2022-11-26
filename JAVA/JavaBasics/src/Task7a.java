@@ -1,10 +1,8 @@
-import java.util.Scanner;
-
 public class Task7a {
     public static void main(String[] args) {
         System.out.println("Which day is today? 1-7");
-        Scanner scanner = new Scanner(System.in);
-        int dayOfWeek = scanner.nextInt();
+        int dayOfWeek = Integer.parseInt(args[0]);
+        System.out.println("Day of the week: " + dayOfWeek);
 
         // Szelekciók 1-1 feltétellel
         /*
