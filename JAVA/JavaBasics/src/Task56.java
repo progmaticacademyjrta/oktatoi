@@ -24,6 +24,7 @@ public class Task56 {
             int billValue = Integer.parseInt(scanner.nextLine());
             //sumOfBills += billValue;   // version 1
             billsMap.put(billName, billValue);
+            // ??????
         }
 
         // version 2
