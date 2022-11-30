@@ -18,31 +18,35 @@ public class Task64 {
         int num2 = getNumberFromUser();
         int result = getCalculationResult(op, num1, num2);
         showResultToTheUser(result);
+    }
 
-
+    public static int getCalculationResult(String operator, int number1, int number2) {
+        int calculationResult = 0;
         if (operator.equals("*")) {
-            System.out.println("Result: " + number1 * number2);
+            calculationResult = number1 * number2;
         } else if (operator.equals("/")) {
-            System.out.println("Result: " + number1 / number2);
+            calculationResult = number1 / number2;
         } else if (operator.equals("-")) {
-            System.out.println("Result: " + (number1 - number2)); // itt szükség van a zárójelre a műveleti sorrend miatt
+            calculationResult = number1 - number2; // itt szükség van a zárójelre a műveleti sorrend miatt
         } else if (operator.equals("+")) {
-            System.out.println("Result: " + (number1 + number2));
+            calculationResult = number1 + number2;
         } else if (operator.equals("pumped")) {
-            System.out.println("Result: " + number1 * number1 * number1 * number2 * number2 * number2);
+            calculationResult = number1 * number1 * number1 * number2 * number2 * number2;
         } else {
             System.out.println("Unsupported operator. Please re-run!");
         }
+        return calculationResult;
     }
 
-    public static String getOperatorFromUser(){
+
+    public static String getOperatorFromUser() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Give the operator first? (+ - * / pumped)");
         String operator = scan.nextLine();
         return operator;
     }
 
-    public static int getNumberFromUser(){
+    public static int getNumberFromUser() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Number: ");
         int number = scan.nextInt();
