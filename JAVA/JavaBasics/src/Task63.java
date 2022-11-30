@@ -32,9 +32,9 @@ public class Task63 {
 
     public static boolean isTriangeValid(int a, int b, int c) {
         boolean isValid;
-        isValid = (aoldal + boldal) > coldal &&
-                (aoldal + coldal) > boldal &&
-                (boldal + coldal) > aoldal;
+        isValid = (a + b) > c &&
+                (a + c) > b &&
+                (b + c) > a;
         return isValid;
     }
 
