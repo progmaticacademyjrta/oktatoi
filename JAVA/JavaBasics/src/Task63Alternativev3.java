@@ -9,6 +9,9 @@ public class Task63Alternativev3 {
         List<Integer> sidesList = getTriangleDataFromConsole();
         boolean result = isTriangeValid(sidesList);
         showResultToTheUser(result);
+
+        // a fenti 3 utasítás egyben
+        // showResultToTheUser(isTriangeValid(getTriangleDataFromConsole()));
     }
 
     public static void showResultToTheUser(boolean result) {
