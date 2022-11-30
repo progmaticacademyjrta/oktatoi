@@ -20,14 +20,6 @@ public class Task64 {
         showResultToTheUser(result);
 
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Give the operator first? (+ - * / pumped)");
-        String operator = scan.nextLine();
-        System.out.println("First number: ");
-        int number1 = scan.nextInt();
-        System.out.println("Second number: ");
-        int number2 = scan.nextInt();
-
         if (operator.equals("*")) {
             System.out.println("Result: " + number1 * number2);
         } else if (operator.equals("/")) {
@@ -41,5 +33,19 @@ public class Task64 {
         } else {
             System.out.println("Unsupported operator. Please re-run!");
         }
+    }
+
+    public static String getOperatorFromUser(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Give the operator first? (+ - * / pumped)");
+        String operator = scan.nextLine();
+        return operator;
+    }
+
+    public static int getNumberFromUser(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Number: ");
+        int number = scan.nextInt();
+        return number;
     }
 }
