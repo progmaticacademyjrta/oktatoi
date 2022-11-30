@@ -16,7 +16,7 @@ public class Task64 {
         int op = getOperatorFromUser();
         int num1 = getNumberFromUser();
         int num2 = getNumberFromUser();
-        int result = getCalculationResult(operator, number1,number2);
+        int result = getCalculationResult(op, num1, num2);
         showResultToTheUser(result);
 
 
