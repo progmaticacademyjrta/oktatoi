@@ -13,8 +13,14 @@ public class Task64 {
      * Végül egy metódust ami kiírja az eredményt a konzolra (showResultToTheUser(result) )
      */
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        int op = getOperatorFromUser();
+        int num1 = getNumberFromUser();
+        int num2 = getNumberFromUser();
+        int result = getCalculationResult(operator, number1,number2);
+        showResultToTheUser(result);
 
+
+        Scanner scan = new Scanner(System.in);
         System.out.println("Give the operator first? (+ - * / pumped)");
         String operator = scan.nextLine();
         System.out.println("First number: ");
