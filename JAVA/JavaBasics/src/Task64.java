@@ -13,7 +13,7 @@ public class Task64 {
      * Végül egy metódust ami kiírja az eredményt a konzolra (showResultToTheUser(result) )
      */
     public static void main(String[] args) {
-        int op = getOperatorFromUser();
+        String op = getOperatorFromUser();
         int num1 = getNumberFromUser();
         int num2 = getNumberFromUser();
         int result = getCalculationResult(op, num1, num2);
