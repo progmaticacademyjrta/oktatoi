@@ -5,13 +5,18 @@ public class Task65 {
     public static void main(String[] args) {
         String userHand = getUserHandValueFromConsole();
         String computerHand = getRandomComputerHand();
-        fight(userHand,computerHand);
-        
+        fight(userHand, computerHand);
+    }
+
+    public static String getUserHandValueFromConsole() {
         System.out.println("Guess one! Rock / Paper / Scissors:");
         Scanner scanner = new Scanner(System.in);
         String userHand = scanner.nextLine();
-        String computerHand;
+        return userHand;
+    }
 
+    public static String getRandomComputerHand() {
+        String computerHand;
         Random random = new Random();
         int computerGuess = random.nextInt(3);
 
@@ -29,7 +34,10 @@ public class Task65 {
                 computerHand = "Invalid";
         }
         System.out.println("computerHand: " + computerHand);
+        return computerHand;
+    }
 
+    public static void fight(String userHand, String computerHand) {
         if (userHand.equals(computerHand)) {
             System.out.println("Draw");
         } else if (userHand.equals("Rock") && computerHand.equals("Scissors")) {
