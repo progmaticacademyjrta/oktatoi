@@ -4,15 +4,21 @@ public class Task66 {
         String myFavoriteCar = "Alfa Romeo";
 
         searchForItemInArray(carsArray, myFavoriteCar);
+        if (searchForItemInArray(carsArray, myFavoriteCar)) {
+            System.out.println("HURRAY");
+        }
     }
 
-    public static void searchForItemInArray(String[] carsArray, String myFavoriteCar) {
-        for (int i = 0; i < carsArray.length; i++) {
-            if (carsArray[i].equals(myFavoriteCar)) {
-                System.out.println(carsArray[i] + "a kedvenc autómárkám.");
+    public static boolean searchForItemInArray(String[] array, String searchItem) {
+        boolean isInArray = false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(searchItem)) {
+                System.out.println(array[i] + " is in the array.");
+                isInArray = true;
                 break;   // opcionális optimalizálásként, ne fusson tovább a ciklus ha megtalálta a kedvencet
             }
             System.out.println("Check: " + i);
         }
+        return isInArray;
     }
 }
