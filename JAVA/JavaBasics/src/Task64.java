@@ -20,6 +20,10 @@ public class Task64 {
         showResultToTheUser(result);
     }
 
+    public static void showResultToTheUser(int result) {
+        System.out.println("Result: " + result);
+    }
+
     public static int getCalculationResult(String operator, int number1, int number2) {
         int calculationResult = 0;
         if (operator.equals("*")) {
