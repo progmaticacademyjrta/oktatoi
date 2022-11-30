@@ -3,13 +3,9 @@ public class Task66Improved {
         String[] carsArray = {"Kia", "Ferrari", "Bmw", "Alfa Romeo", "Mercedes"};
         String myFavoriteCar = "Alfa Romeo";
 
-        searchForItemInArray(carsArray, myFavoriteCar);
-
-        /*
         if (searchForItemInArray(carsArray, myFavoriteCar)) {
             System.out.println("HURRAY");
         }
-        */
     }
 
     public static boolean searchForItemInArray(String[] array, String searchItem) {
