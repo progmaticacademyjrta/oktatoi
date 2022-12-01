@@ -36,6 +36,7 @@ public class StringMethods {
         String newtext = text.replace("a","*"); // le kell menteni külön változóba mert nem tudja felülírni magát
         System.out.println(newtext);
 
+        // feldarabolása a szövegnek egy speciális kifejezés mentén
         String price = "5600-Ft";
         String[] splittedPrice = price.split("-");
         System.out.println(splittedPrice[0]);
