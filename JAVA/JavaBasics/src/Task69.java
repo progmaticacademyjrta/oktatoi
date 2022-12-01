@@ -10,14 +10,7 @@ public class Task69 {
         printListWithWhile(favoriteFruits);
         printListWithDoWhile(favoriteFruits);
 
-        List<String> favoriteFruits = new ArrayList<>();
-        favoriteFruits.add("Apple");
-        favoriteFruits.add("Banana");
-        favoriteFruits.add("Melon");
-        favoriteFruits.add("Cherry");
-        favoriteFruits.add("Orange");
-        favoriteFruits.add("Strawberry");
-        favoriteFruits.add("Raspberry");
+
 
         System.out.println(favoriteFruits);
 
@@ -45,5 +38,18 @@ public class Task69 {
             System.out.println(favoriteFruits.get(i));
             i++;
         } while (i < favoriteFruits.size());
+    }
+
+
+    public static List<String> getFavoriteFruits(){
+        List<String> favoriteFruits = new ArrayList<>();
+        favoriteFruits.add("Apple");
+        favoriteFruits.add("Banana");
+        favoriteFruits.add("Melon");
+        favoriteFruits.add("Cherry");
+        favoriteFruits.add("Orange");
+        favoriteFruits.add("Strawberry");
+        favoriteFruits.add("Raspberry");
+        return favoriteFruits;
     }
 }
