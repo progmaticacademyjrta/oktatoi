@@ -8,10 +8,13 @@ public class Task80 {
      * @param args
      */
     public static void main(String[] args) {
-        getSubStringofString(args[0],args[1]);
+        String result = getSubStringofString(args[0], Integer.parseInt(args[1]));
+        System.out.println(result);
     }
 
-    public static ??? getSubStringofString(???, ???){
+    public static String getSubStringofString(String text, int count){
+        String result = null;
 
+        return result;
     }
 }
