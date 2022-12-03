@@ -26,6 +26,7 @@ public class StringMethods {
 
         // kivágunk egy részletet a szövegből
         System.out.println(text.substring(1, 4)); // a 4. indexű elemet már nem tartalmazza
+        System.out.println(text.substring(3)); // 3-as indexű karaktertől a String végéig kivágja a részStringet
 
         // logikai igaz vagy hamist ad vissza a három metódus
         System.out.println(text.startsWith("Prog")); // kis és nagybetűs érzékeny
@@ -38,9 +39,21 @@ public class StringMethods {
 
         // feldarabolása a szövegnek egy speciális kifejezés mentén
         String price = "5600-Ft";
-        String[] splittedPrice = price.split("-");
+        String[] splittedPrice = price.split("-");  // maga a - jel, nem kerül bele a String tömb egyik elemébe se
         System.out.println(splittedPrice[0]);
+        System.out.println(splittedPrice[1]);
         int priceInt = Integer.parseInt(splittedPrice[0]);
+
+        // String értéke nem felülírható
+        String bob = "Bob";
+        System.out.println(bob);
+        bob.toLowerCase();
+        System.out.println(bob);
+
+        String adam = "Adam";
+        System.out.println(adam);
+        adam = adam.toLowerCase();
+        System.out.println(adam);
     }
 }
 
