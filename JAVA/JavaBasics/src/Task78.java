@@ -18,7 +18,7 @@ public class Task78 {
         String string;
         String text;
 
-        if(args.length != 0) {
+        if(args.length != 0) {   // ua.: mint az if(args.lenth > 0)
             string = args[0];   //parancssori arg b) megoldás
             text = args[1];    //parancssori arg b) megoldás
         }else {
