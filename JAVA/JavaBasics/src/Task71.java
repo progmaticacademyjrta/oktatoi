@@ -16,8 +16,9 @@ public class Task71 {
         do {
             System.out.println("value: ");
             value = scanner.nextLine();
-            valuesFromConsole.add(value);
-        } while (!value.equals("X"));
+            if (!value.equalsIgnoreCase("X"))
+                valuesFromConsole.add(value.toLowerCase());
+        } while (!value.equalsIgnoreCase("X"));   // ugyanaz mint a !value.equals(x) csak figyelmen kívül hagyja hogy az x kis vagy betűs
 
         System.out.println(valuesFromConsole);
     }
