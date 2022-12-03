@@ -14,9 +14,12 @@ public class Task82 {
     public static void main(String[] args) {
         List<String> words =  Arrays.asList("kaki", "mégcsúnyábbkaki");
         //String wrongWord = "kaki";
-        String text = "Elmentem abba a kaki boltba de találkoztam azzal a kaki bácsival.";
+        String text = "Elmentem abba a kaki boltba de találkoztam azzal a mégcsúnyábbkaki bácsival.";
 
-        String resultText = text.replaceAll(wrongWord,"*");
+        String resultText = "";
+        for (String word : words) {
+            resultText = text.replaceAll(word,"*");
+        }
 
         System.out.println(resultText);
     }
