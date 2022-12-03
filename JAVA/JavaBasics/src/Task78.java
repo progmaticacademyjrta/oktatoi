@@ -11,13 +11,20 @@ public class Task78 {
      * a) hogy ki tudjuk próbálni a metódust, konzolról olvassunk be két értéket a main metódusban és hívjuk meg a készített metódust velük.
      * b) parancssori argumentumként olvassunk be két értéket a main metódusban és hívjuk meg a készített metódust velük.
      * c) a metódus távolítsa el a felesleges szóközöket a String-ek elejéről és végéről
+     * d) amennyiben van a program indításakor parancssori argumentum beállítva akkor használja azokat
+     *    ha viszont nincs, akkor olvassa be az adatokat a konzolról
      */
     public static void main(String[] args) {
-        //String string = readStringFromConsole();
-        //String text = readStringFromConsole();
+        String string;
+        String text;
 
-        String string = "??";  //parancssori arg
-        String text = "??";    //parancssori arg
+        if(args.length != 0) {
+            string = args[0];   //parancssori arg b) megoldás
+            text = args[1];    //parancssori arg b) megoldás
+        }else {
+            string = readStringFromConsole();
+            text = readStringFromConsole();
+        }
 
         System.out.println("Result: "+isStringStartsWithText(string,text));
     }
@@ -29,6 +36,8 @@ public class Task78 {
     }
 
     public static boolean isStringStartsWithText(String string, String text) {
+        string = string.trim();
+        text = text.trim();
         boolean result;
         if (string.startsWith(text))
             result = true;
@@ -38,13 +47,13 @@ public class Task78 {
     }
 
     public static boolean isStringStartsWithTextv2(String string, String text) {
-        if (string.startsWith(text))
+        if (string.trim().startsWith(text.trim()))
             return true;
         else
             return false;
     }
 
     public static boolean isStringStartsWithTextv3(String string, String text) {
-        return string.startsWith(text);
+        return string.trim().startsWith(text.trim());
     }
 }
