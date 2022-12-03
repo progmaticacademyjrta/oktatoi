@@ -17,8 +17,7 @@ public class Task75step1 {
      * c) Jelenítsük meg az adatokat százalékos formában is
      */
     public static void main(String[] args) {
-        List<String> testruns = Arrays.asList("00171", "0018X", "00190", "00111");
-
+        List<String> testruns = Arrays.asList("00171", "0018X", "00190", "00111", "00101", "0007X");
         // String testrun = testruns.get(0); //testrun = 00171
         int passCount = 0;
         int skipCount = 0;
@@ -43,5 +42,15 @@ public class Task75step1 {
         System.out.println("Count of passed: " + passCount);
         System.out.println("Count of failed: " + skipCount);
         System.out.println("Count of skipped: " + failedCount);
+
+        // version 1
+        //double passRatio = (double) passCount / testruns.size();
+        //System.out.println(passRatio * 100 + " %");
+
+        // version 2
+        System.out.println("Pass ratio: " + passCount * 100 / testruns.size() + "%");
+        System.out.println("Failed ratio: " + failedCount * 100 / testruns.size() + "%");
+        System.out.println("Skipped ratio: " + skipCount * 100 / testruns.size() + "%");
+
     }
 }
