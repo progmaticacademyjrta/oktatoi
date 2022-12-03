@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Task80 {
     /**
      * Írjatok egy metódust, amely képes megkeresni a paraméterként kapott szöveg elejéről,
@@ -14,7 +16,8 @@ public class Task80 {
 
     public static String getSubStringofString(String text, int count){
         String result = null;
-
+        // hellóbelló és 2 esetén ---- he
+        result = text.substring(0,count) ;
         return result;
     }
 }
