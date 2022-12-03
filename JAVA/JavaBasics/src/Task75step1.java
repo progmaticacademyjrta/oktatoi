@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class Task75step0 {
+public class Task75step1 {
     /**
      * Készítsetek teszteset futási összesítő alkalmazást.
      * A futási eredmények az alábbi formában tároljuk le egy ArrayList-ben
@@ -17,28 +17,28 @@ public class Task75step0 {
      * c) Jelenítsük meg az adatokat százalékos formában is
      */
     public static void main(String[] args) {
-        List<String> testruns = Arrays.asList("00171", "0018X");
+        List<String> testruns = Arrays.asList("00171", "0018X", "00190", "00111");
 
-        String testrun = testruns.get(0); //testrun = 00171
+        // String testrun = testruns.get(0); //testrun = 00171
         int passCount = 0;
         int skipCount = 0;
         int failedCount = 0;
-        String executionResult = testrun.substring(4); //00171 -ből csak az utolsó értéket kivágni
-
-        switch (executionResult) {
-            case "1":
-                passCount++;  //ua: passCount=passCount+1 ill passCount+=1
-                break;
-            case "X":
-                skipCount++;
-                break;
-            case "0":
-                failedCount++;
-                break;
-            default:
-                System.out.println("Incorrect execution result");
+        for (String testrun : testruns) {
+            String executionResult = testrun.substring(4); //00171 -ből csak az utolsó értéket kivágni
+            switch (executionResult) {
+                case "1":
+                    passCount++;  //ua: passCount=passCount+1 ill passCount+=1
+                    break;
+                case "X":
+                    skipCount++;
+                    break;
+                case "0":
+                    failedCount++;
+                    break;
+                default:
+                    System.out.println("Incorrect execution result");
+            }
         }
-
         System.out.println("Total test case number: " + testruns.size());
         System.out.println("Count of passed: " + passCount);
         System.out.println("Count of failed: " + skipCount);
