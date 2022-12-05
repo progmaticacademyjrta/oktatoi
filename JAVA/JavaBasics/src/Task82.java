@@ -18,7 +18,7 @@ public class Task82 {
         String resultText = "";
         for (String word : words) {
             text = text.replaceAll(word, "*");
-            // resultText = text..replaceAll(word, "*") esetén:
+            // resultText = text..replaceAll(  word, "*") esetén:
             // resultText = "Elmentem abba a * boltba de találkoztam azzal a mégcsúnyábbkaki bácsival.";
             // resultText = "Elmentem abba a kaki boltba de találkoztam azzal a * bácsival.";
         }
