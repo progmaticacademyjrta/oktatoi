@@ -7,7 +7,7 @@ public class Task83 {
      */
     public static void main(String[] args) {
         int vitaminC = 500;
-        int vintaminD = 800;
+        int vitaminD = 800;
         int vitaminE = 100;
 
         String[] array = "kutyuli:macska".split(":");
@@ -60,9 +60,15 @@ public class Task83 {
             String[] values = vitaminConsumption.split(",") ;
             // name = "Bob-a4e7e3f7"
             String name = values[0].substring(5);  //values[0].split(":")[1];  vagy ua.: values[0].substring(5,values.length)
-            int vitaminCValue = ??;
-            int vitaminDValue = ??;
-            int vitaminEValue = ??;
+            // String[] vitaminCArray = values[1].split(":");
+            // vitaminCArray[0] = "C";
+            // vitaminCArray[1] = "150";
+            int vitaminCValue = Integer.parseInt(values[1].split(":")[1]); //  150
+            int vitaminDValue = Integer.parseInt(values[2].split(":")[1]); // 1800
+            int vitaminEValue = Integer.parseInt(values[3].split(":")[1]); // 3600
+
+            System.out.println("Hey "+???);
+
         }
 
     }
