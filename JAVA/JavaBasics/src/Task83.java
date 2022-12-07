@@ -53,11 +53,12 @@ public class Task83 {
 
         for (String vitaminConsumption :vitaminConsumptions) {
             // hogyan darabolod fel az alábbi példát: "Name:Bob-a4e7e3f7,C:150,D:1800,E:3600"?
-            // values[0] = Name:Bob-a4e7e3f7
-            // values[1] = C:150
-            // values[2] = D:1800
-            // values[3] = E:3600
+            // values[0] = "Name:Bob-a4e7e3f7"
+            // values[1] = "C:150"
+            // values[2] = "D:1800"
+            // values[3] = "E:3600"
             String[] values = vitaminConsumption.split(",") ;
+            // name = "Bob-a4e7e3f7"
             String name = ??;
             int vitaminCValue = ??;
             int vitaminDValue = ??;
