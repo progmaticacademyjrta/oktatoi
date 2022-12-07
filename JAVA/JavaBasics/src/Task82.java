@@ -17,7 +17,12 @@ public class Task82 {
 
         String resultText = "";
         for (String word : words) {
-            text = text.replaceAll(word, "*");
+            int starCount = word.length();
+            String stars = "";
+            for (int i = 1; i <= starCount; i++) {
+                stars = stars + "*";
+            }
+            text = text.replaceAll(word, stars);
             // resultText = text..replaceAll(  word, "*") esetén:
             // resultText = "Elmentem abba a * boltba de találkoztam azzal a mégcsúnyábbkaki bácsival.";
             // resultText = "Elmentem abba a kaki boltba de találkoztam azzal a * bácsival.";
