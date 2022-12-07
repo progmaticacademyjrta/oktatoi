@@ -59,7 +59,7 @@ public class Task83 {
             // values[3] = "E:3600"
             String[] values = vitaminConsumption.split(",") ;
             // name = "Bob-a4e7e3f7"
-            String name = ??;
+            String name = values[0].substring(5);  //values[0].split(":")[1];  vagy ua.: values[0].substring(5,values.length)
             int vitaminCValue = ??;
             int vitaminDValue = ??;
             int vitaminEValue = ??;
