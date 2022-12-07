@@ -51,13 +51,13 @@ public class Task83 {
                 "Name:Scarlett-991f6f64,C:750,D:2000,E:4000"
         );
 
-        for (String vitaminConsumption :vitaminConsumptions) {
+        for (String vitaminConsumption : vitaminConsumptions) {
             // hogyan darabolod fel az alábbi példát: "Name:Bob-a4e7e3f7,C:150,D:1800,E:3600"?
             // values[0] = "Name:Bob-a4e7e3f7"
             // values[1] = "C:150"
             // values[2] = "D:1800"
             // values[3] = "E:3600"
-            String[] values = vitaminConsumption.split(",") ;
+            String[] values = vitaminConsumption.split(",");
             // name = "Bob-a4e7e3f7"
             String name = values[0].substring(5);  //values[0].split(":")[1];  vagy ua.: values[0].substring(5,values.length)
             // String[] vitaminCArray = values[1].split(":");
@@ -67,9 +67,17 @@ public class Task83 {
             int vitaminDValue = Integer.parseInt(values[2].split(":")[1]); // 1800
             int vitaminEValue = Integer.parseInt(values[3].split(":")[1]); // 3600
 
-            System.out.println("Hey "+???);
-
+            System.out.print("Hey " + name+"! ");
+            if (vitaminCValue < vitaminC) {
+                System.out.print("Your C-vitamin consumption is too low! ");
+            }
+            if (vitaminDValue < vitaminD) {
+                System.out.print("Your D-vitamin consumption is too low! ");
+            }
+            if (vitaminEValue < vitaminE) {
+                System.out.print("Your E-vitamin consumption is too low! ");
+            }
+            System.out.println();
         }
-
     }
 }
