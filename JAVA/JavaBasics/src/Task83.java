@@ -52,11 +52,11 @@ public class Task83 {
         );
 
         for (String vitaminConsumption :vitaminConsumptions) {
-            String[] values = ??
-            String name = ??
-            int vitaminCValue = ??
-            int vitaminDValue = ??
-            int vitaminEValue = ??
+            String[] values = ??;
+            String name = ??;
+            int vitaminCValue = ??;
+            int vitaminDValue = ??;
+            int vitaminEValue = ??;
         }
 
     }
