@@ -9,7 +9,9 @@ import java.util.Scanner;
 
 public class Task87 {
     /**
-     *
+     * (Órai) Adott egy neveket tartalmazó fájl. Készítsünk egy programot,
+     * ami beolvassa annak tartalmát és megvizsgálja, hogy a console-ról beolvasott név
+     * benne van-e.
      */
     public static void main(String[] args) {
 
