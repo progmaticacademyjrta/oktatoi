@@ -23,12 +23,15 @@ public class Task91 {
      * hogy vegyünk belőle annyit amennyi hiányzik az ajánlott mennyiség eléréséhez.
      */
     public static void main(String[] args) {
-        List<String> foodStateList = getFoodStateList();
+        String filename = args[0];
+        System.out.println("Filename: "+ filename);
+
+        List<String> foodStateList = getFoodStateList(filename);
 
         foodStateList.remove(0);  // a csv fájl első sorát, fejlécet távolítja el
         for (String foodState : foodStateList) {
             // foodState = "Coffee, 17, 25" //egy listaelem az egy sor a fájlban
-            System.out.println(foodState);
+            // System.out.println(foodState);
             // foodState = "Coffee,17,25" // kell eredmény legyen mint String, mert a szóközöket ki kell venni
             // String newFoodState = foodState.replaceAll(" ","");
             // System.out.println(newFoodState);
@@ -47,11 +50,11 @@ public class Task91 {
 
     }
 
-    public static List<String> getFoodStateList() {
+    public static List<String> getFoodStateList(String fileName) {
         List<String> foodStateList = new ArrayList<>();
 
         try {
-            foodStateList = Files.readAllLines(Path.of("src/resources/actual-food-set.csv"));
+            foodStateList = Files.readAllLines(Path.of(fileName ));
             //System.out.println("File contains: " + foodStateList);
             //System.out.println(foodStateList.get(1));
         } catch (IOException e) {
