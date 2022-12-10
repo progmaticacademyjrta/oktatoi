@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -60,6 +61,23 @@ public class Task92 {
         System.out.println("Number of different titles: " + bookCountMap.size());
         System.out.println("Total number of books (from List): " + bookList.size());
         System.out.println("Total number of books (from Map): " + sumOfBooks);
+        // FÁJLBA IS MENTSEN
+        String content = "Number of different titles: " + bookCountMap.size() + System.lineSeparator() +
+                "Total number of books (from List): " + bookList.size() + System.lineSeparator()+
+                "Total number of books (from Map): " + sumOfBooks;
+        writeBookSummary(content);
+        // VAGY a fenti egy metódushívás vagy a lenti 3 választható megoldási út
+        //writeBookSummary("Number of different titles: " + bookCountMap.size());
+        //writeBookSummary("Total number of books (from List): " + bookList.size());
+        //writeBookSummary("Total number of books (from Map): " + sumOfBooks);
+    }
+
+    public static void writeBookSummary(String content) {
+        try {
+            Files.writeString(Path.of("src/resources/booksCount.txt"), content);
+        } catch (IOException e) {
+            System.out.println("There was a problem with the file writing.");
+        }
     }
 
     public static List<String> getBookList() {
