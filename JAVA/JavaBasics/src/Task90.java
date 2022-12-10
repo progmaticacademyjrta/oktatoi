@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,17 +31,22 @@ public class Task90 {
         String content = "";
         for (String shoppingItem : shoppingList) {
             //shoppingItem = "tej 3db";
-            content += shoppingItem + System.lineSeparator();
+            content += shoppingItem + System.lineSeparator();  // új sor karaktert fűz a Stringhez az előzetesen itt lévő ", " vesszős megoldás helyett
         }
 
         writeShoppingListToFile(content);
     }
 
     public static void writeShoppingListToFile(String item) {
-        System.out.println("I will save: " + System.lineSeparator() + item + "to the file.");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please add the name of the file:");
+        String fileName = scan.nextLine();
+
+        System.out.println("I will save: " + System.lineSeparator() + item + "to the " + fileName + ".txt file.");
         // 2) fájlba írás elkészítése
         try {
-            Files.writeString(Path.of("src/resources/shoppinglist.txt"), item);
+            new File("src/resources/savedfiles").mkdirs(); // új mappa létrehozása a projectben amennyiben még nem létezik
+            Files.writeString(Path.of("src/resources/savedfiles/" + fileName + ".txt"), item);
             System.out.println("File saved.");
         } catch (IOException e) {
             System.out.println("Couldn't save the following file: " + e.getMessage());
