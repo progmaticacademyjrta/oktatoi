@@ -1,16 +1,13 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
 
 public class Task94 {
     /**
-     * Dolgozzátok át a számológép programot úgy,
-     * hogy tartalmazzon külön metódust az adatokbekérésre a felhasználótól
-     * ( getNumberFromUser() ),
-     * valamint egyet az operátor beolvasásra (getOperatorFromUser() ).
-     * <p>
-     * Ezt követően egy külön metódust amely elvégzi a műveletet és
-     * visszaadja az eredményt ( getCalculationResult(operator, number1,number2) ),
-     * <p>
-     * Végül egy metódust ami kiírja az eredményt a konzolra (showResultToTheUser(result) )
+     A task64 megoldása alapján bővítsétek ki a számológép működését,
+     hogy amit a felhasználó számol és annak eredménye kerüljön
+     elmentésre egy naplófájlként. (calculator.log) néven
      */
     public static void main(String[] args) {
         String op = getOperatorFromUser();
@@ -19,7 +16,15 @@ public class Task94 {
         int result = getCalculationResult(op, num1, num2);
         showResultToTheUser(result);
         // RESULT kiírása fájlba!
-        //????
+        writeCalculationLog(String.valueOf(result));  // Stringgé alakítja az int-et
+    }
+
+    public static void writeCalculationLog(String log){
+        try {
+            Files.writeString(Path.of("src/resources/calculator.log"),"The calculated result was: "+log);
+        } catch (IOException e) {
+            System.out.println("Couldn't save the log file.");
+        }
     }
 
     public static void showResultToTheUser(int result) {
