@@ -53,5 +53,14 @@ public class Donut {
         this.decor = decor;
     }
 
-
+    @Override
+    public String toString() {
+        return "Donut{" +
+                "shape='" + shape + '\'' +
+                ", size=" + size +
+                ", flavor='" + flavor + '\'' +
+                ", ingredients='" + ingredients + '\'' +
+                ", decor='" + decor + '\'' +
+                '}';
+    }
 }
