@@ -1,3 +1,5 @@
+package progmatic.donut;
+
 public class Donut {
     private String shape;
     private int size;
@@ -55,7 +57,7 @@ public class Donut {
 
     @Override
     public String toString() {
-        return "Donut{" +
+        return "progmatic.donut.Donut{" +
                 "shape='" + shape + '\'' +
                 ", size=" + size +
                 ", flavor='" + flavor + '\'' +

@@ -1,3 +1,5 @@
+package progmatic.eloadasanyag;
+
 public class Car {
 
     // fields
@@ -27,7 +29,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "progmatic.eloadasanyag.Car{" +
                 "model='" + model + '\'' +
                 ", color='" + color + '\'' +
                 '}';

@@ -1,3 +1,5 @@
+package progmatic.eloadasanyag;
+
 public class Main {
     public static void main(String[] args) {
       Car ferrari = new Car("GT-1000","Red");

@@ -1,3 +1,5 @@
+package progmatic.auto;
+
 public class Auto {
     private String manufacturer;
     private String model;
@@ -25,8 +27,8 @@ public class Auto {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setModel(String modelNewValue) {
+        this.model = modelNewValue;
     }
 
     public int getReleaseDate() {
@@ -55,7 +57,7 @@ public class Auto {
 
     @Override
     public String toString() {
-        return "Auto{" +
+        return "progmatic.auto.Auto{" +
                 "manufacturer='" + manufacturer + '\'' +
                 ", model='" + model + '\'' +
                 ", releaseDate=" + releaseDate +

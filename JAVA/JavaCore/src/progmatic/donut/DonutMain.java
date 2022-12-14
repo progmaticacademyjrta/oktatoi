@@ -1,3 +1,5 @@
+package progmatic.donut;
+
 public class DonutMain {
     public static void main(String[] args) {
         Donut klasszik = new Donut("kerek",10, "csokis","liszt", "porcukor");
