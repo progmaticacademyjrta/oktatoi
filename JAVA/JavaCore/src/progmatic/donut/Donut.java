@@ -1,6 +1,6 @@
 package progmatic.donut;
 
-public class Donut {
+public class Donut{
     private String shape;
     private int size;
     private String flavor;

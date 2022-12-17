@@ -35,4 +35,42 @@ public class ClassicDonut {
         System.out.println("Eat more be bigger.");
     }
 
+    public String getShape() {
+        return shape;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public String getDecor() {
+        return decor;
+    }
+
+    public String getValues() {
+        return "shape=" + shape +
+                ", size=" + size +
+                ", flavor=" + flavor +
+                ", ingredients=" + ingredients +
+                ", decor=" + decor;
+    }
+
+    @Override
+    public String toString() {
+        return "ClassicDonut{" +
+                "shape='" + shape + '\'' +
+                ", size=" + size +
+                ", flavor='" + flavor + '\'' +
+                ", ingredients='" + ingredients + '\'' +
+                ", decor='" + decor + '\'' +
+                '}';
+    }
 }
