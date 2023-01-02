@@ -1,6 +1,6 @@
 package progmatic.eloadasanyag.abstractdogs;
 
-public class AbstractDog {
+public abstract class AbstractDog {
     private String type;
     private String name;
     private String gender;
