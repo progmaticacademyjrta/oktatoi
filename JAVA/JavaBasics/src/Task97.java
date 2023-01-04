@@ -2,8 +2,8 @@ import java.time.LocalDate;
 
 public class Task97 {
     public static void main(String[] args) {
-        //2023. január 11
-        LocalDate firstSaturday = LocalDate.of(2023, 1, 11);
+        //2023. január 07
+        LocalDate firstSaturday = LocalDate.of(2023, 1, 7);
         System.out.println(firstSaturday);
 
         int count = 1;
