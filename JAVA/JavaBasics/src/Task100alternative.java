@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Task100 {
+public class Task100alternative {
     /**
      * Készítsetek összesítő alkalmazást, ami megszámolja hogy az adott nap
      * hányszor volt valamilyen rendszerleállás az egyik microservice kapcsán.
@@ -33,9 +33,10 @@ public class Task100 {
 
         int beforenoon = 0;
         int afternoon = 0;
+        LocalTime noon = LocalTime.parse("12:00"); // LocalTime.of(12,0);
         for (LocalTime localTimeLog : logsInLocalTime) {
             //12:00 előtt vagy után???
-            if(localTimeLog.getHour()<12)
+            if (localTimeLog.isBefore(noon))
                 beforenoon++;
             else
                 afternoon++;
