@@ -12,6 +12,6 @@ public class Task104 {
             count++;
             long milliseconds = System.currentTimeMillis(); //UTC aktuális idő (GMT+0)
             System.out.println(milliseconds);
-        } while (count < 1000);
+        } while (count < 100);
     }
 }
