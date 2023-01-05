@@ -8,7 +8,7 @@ public class CurrentMilisExamples {
         System.out.println(milliseconds);
 
         LocalDateTime date =
-                LocalDateTime.ofInstant(Instant.ofEpochMilli(milliseconds), ZoneId.systemDefault());
+                LocalDateTime.ofInstant(Instant.ofEpochMilli(milliseconds), ZoneId.systemDefault()); // a gép aktuálisan beállított időzónája szerinti LocalDateTime-ra alakítja át a milisec-et
         System.out.println(date);
     }
 }
