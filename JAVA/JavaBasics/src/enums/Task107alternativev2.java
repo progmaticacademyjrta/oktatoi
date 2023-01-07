@@ -13,7 +13,7 @@ public class Task107alternativev2 {
      * Pl.: 1 esetén ACCEPTED
      */
     public static void main(String[] args) {
-        int rndNumber = UtilMethods.getARandomNumber(100, true);
+        int rndNumber = UtilMethods.getARandomNumber(4, false);
         String prefix = "Your order is currently ";
         System.out.println(prefix + getOrderStatus(rndNumber));
     }

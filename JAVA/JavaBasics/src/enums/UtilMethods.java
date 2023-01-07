@@ -10,7 +10,7 @@ public class UtilMethods {
         if (isZeroNeeded)
             rndNumber = rnd.nextInt(bound);
         else
-            rndNumber = rnd.nextInt(bound) + 1;
+            rndNumber = rnd.nextInt(bound - 1) + 1;
         return rndNumber;
     }
 }
