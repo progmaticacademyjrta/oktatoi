@@ -7,7 +7,7 @@ public class Task106 {
         int boundaryValue = Integer.parseInt(args[0]);
         System.out.println("Please add your points: ");
         Scanner scanner = new Scanner(System.in);
-        long userPoints = scanner.nextLong();
+        int userPoints = scanner.nextInt();
 
         System.out.print("Your result: ");
         if (userPoints >= boundaryValue)
