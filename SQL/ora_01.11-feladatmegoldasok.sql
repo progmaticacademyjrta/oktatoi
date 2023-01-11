@@ -19,6 +19,16 @@ SELECT * FROM csoport WHERE pontszam BETWEEN 100 and 200;
 -- VAGY
 SELECT csoport_neve FROM csoport WHERE pontszam >= 100 and pontszam <= 200;
 /*
+15. Romániát kizárta a versenybíróság csalás miatt. Nullázzuk ki az elért pontszámukat.
+*/
+SELECT * FROM csoport WHERE nemzetiseg='román';
+-- VAGY
+SELECT * FROM csoport WHERE nemzetiseg LIKE '%román%';
+-- VAGY
+SELECT * FROM csoport WHERE nemzetiseg LIKE 'r%';
+
+
+/*
 17. Készítsünk statisztikát (hány csapat indult a versenyen illetve mennyi volt az átlagos pontszám idén)
 */
 SELECT COUNT(*) FROM csoport;
