@@ -27,7 +27,15 @@ SELECT * FROM csoport WHERE nemzetiseg LIKE '%román%';
 -- VAGY
 SELECT * FROM csoport WHERE nemzetiseg LIKE 'r%';
 
-
+UPDATE csoport SET pontszam=0 WHERE nemzetiseg LIKE '%román%';
+/*
+16. Románia bosszút forralt és kitörölték a rendező franciákat az adatbázisból egy biztonsági rést kihasználva.
+Hogyan tették eme galádságot?
+*/
+SELECT * FROM csoport WHERE nemzetiseg LIKE '%francia%';
+SELECT * FROM tancol WHERE nemzetiseg LIKE '%francia%';
+DELETE FROM tancol WHERE nemzetiseg LIKE '%francia%';  --először a kapcsolótáblábol kell törölni
+DELETE FROM csoport WHERE nemzetiseg LIKE '%francia%'; --csak utána tudjuk ezt végrehajtani
 /*
 17. Készítsünk statisztikát (hány csapat indult a versenyen illetve mennyi volt az átlagos pontszám idén)
 */

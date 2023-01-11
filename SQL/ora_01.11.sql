@@ -17,4 +17,8 @@ SELECT MAX(atlag_eletkor) FROM csoport;
 
 SELECT COUNT(csoport_neve) FROM csoport GROUP BY atlag_eletkor;
 SELECT COUNT(csoport_neve),atlag_eletkor FROM csoport GROUP BY atlag_eletkor;
-SELECT COUNT(csoport_neve),atlag_eletkor FROM csoport GROUP BY atlag_eletkor HAVING atlag_eletkor > 18;;
+SELECT COUNT(csoport_neve),atlag_eletkor FROM csoport GROUP BY atlag_eletkor HAVING atlag_eletkor > 18;
+
+SELECT csoport_neve AS "Csoport Név", pontszam AS "Pontszám" FROM csoport ORDER BY pontszam DESC;
+
+SELECT MAX(pontszam) FROM csoport;
