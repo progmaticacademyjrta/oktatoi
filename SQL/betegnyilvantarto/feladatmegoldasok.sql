@@ -3,7 +3,7 @@
 */
 SELECT betegseg.betegseg_neve
 FROM betegseg
-JOIN diagnosztizal ON diagnosztizal.betegseg_neve=betegseg.betegseg_neve
+INNER JOIN diagnosztizal ON diagnosztizal.betegseg_neve=betegseg.betegseg_neve
 WHERE betegseg.betegseg_neve LIKE 'A%'
 AND diagnosztizal.datum='2018-02-08'
 
@@ -12,7 +12,7 @@ AND diagnosztizal.datum='2018-02-08'
 */
 SELECT beteg.taj, erzekeny.gyogyszer_neve
 FROM beteg
-JOIN erzekeny ON erzekeny.taj=beteg.taj
+INNER JOIN erzekeny ON erzekeny.taj=beteg.taj
 WHERE beteg.nev='Szonja'
 
 /*
@@ -22,7 +22,7 @@ A diagnosztizálást dátumát jelenítsük meg "Előfordulás (db)" névvel.
 */
 SELECT COUNT(betegseg.betegseg_neve) AS "Előfordulás (db)", diagnosztizal.datum
 FROM betegseg
-JOIN diagnosztizal ON diagnosztizal.betegseg_neve=betegseg.betegseg_neve
+INNER JOIN diagnosztizal ON diagnosztizal.betegseg_neve=betegseg.betegseg_neve
 WHERE betegseg.betegseg_neve='Sorelvonas'
 GROUP BY diagnosztizal.datum
 HAVING COUNT(betegseg.betegseg_neve) > 1
