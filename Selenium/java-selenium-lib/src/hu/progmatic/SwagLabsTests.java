@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class SwagLabsTests {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver");
 
         //Creating an object of ChromeDriver
@@ -43,6 +43,7 @@ public class SwagLabsTests {
         passwordInputField.sendKeys("secret_sauce");
         loginButton.click();
         // Test Case 1 END
+        Thread.sleep(5000);  // 5 mp.-ig várakozik
 
         driver.close();
         driver.quit();
