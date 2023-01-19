@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class SwagLabsTests {
+public class SwagLabsTestsWithoutTryCatch {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "chromedriver");
 
@@ -28,17 +28,11 @@ public class SwagLabsTests {
         driver.get("https://www.saucedemo.com");
 
         // Test Case 1 START
-        WebElement userNameInputField = null;
-        WebElement passwordInputField = null;
-        WebElement loginButton = null;
-        try {
-            userNameInputField = driver.findElement(By.id("user-name"));
-            passwordInputField = driver.findElement(By.id("password"));
-            loginButton = driver.findElement(By.id("login-button"));
-            System.out.println("userNameInputField, passwordInputField and login-button found!");
-        }catch (NoSuchElementException e){
-            System.out.println("Elements are not there! epic-sadface ");
-        }
+        WebElement userNameInputField = driver.findElement(By.id("user-name"));
+        WebElement passwordInputField = driver.findElement(By.id("password"));
+        WebElement loginButton =  driver.findElement(By.id("login-button"));
+        System.out.println("userNameInputField, passwordInputField and login-button found!");
+
         userNameInputField.sendKeys("standard_user");
         passwordInputField.sendKeys("secret_sauce");
         loginButton.click();
