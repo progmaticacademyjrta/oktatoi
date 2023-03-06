@@ -1,25 +1,29 @@
 pm.test("Status code is 200", function () {
-pm.response.to.have.status(200);
+  pm.response.to.have.status(200);
 });
 
 pm.test("response must be valid and have a body", function () {
-pm.response.to.be.ok;
-pm.response.to.be.withBody;
-pm.response.to.be.json;
+     pm.response.to.be.ok;
+     pm.response.to.be.withBody;
+     pm.response.to.be.json;
 });
 
-pm.test("value of per_page field is 6",function () {
-var jsonData = pm.response.json();
-pm.expect(jsonData[0].name).to.be.a('string');
+pm.test("response should be string for all attributes",function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData[0].name).to.be.a('string');
+    pm.expect(jsonData[0].address).to.be.a('string');
+    pm.expect(jsonData[1].name).to.be.a('string');
+    pm.expect(jsonData[1].address).to.be.a('string');
 });
 
-pm.test("value of per_page field is 6",function () {
-var jsonData = pm.response.json();
-pm.expect(jsonData[0].name).to.eql("Jancsi");
+pm.test("the name of the first object should be Jancsi",function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData[0].name).to.eql("Jancsi");
 });
 
-pm.test("value of per_page field is 6",function () {
-let my_regex = new RegExp(pm.globals.get('r^[a-zA-Z]{3,7}$'));
-var jsonData = pm.response.json();
-pm.expect(jsonData[0].name).to.match(my_regex);
+pm.test("the name of the objects should be 3-7 length long strings",function () {
+    let my_regex = new RegExp(pm.globals.get('r^[a-zA-Z]{3,7}$'));
+    var jsonData = pm.response.json();
+    pm.expect(jsonData[0].name).to.match(my_regex);
+    pm.expect(jsonData[1].name).to.match(my_regex);
 });
