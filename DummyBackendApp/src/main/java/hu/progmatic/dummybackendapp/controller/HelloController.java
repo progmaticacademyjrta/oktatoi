@@ -14,7 +14,12 @@ public class HelloController {
     @Autowired
     LearnerService learnerService;
 
-    @GetMapping("/learners")
+    @GetMapping("/api/hello")
+    public String helloProgmatic(){
+        return "HelloProgmatic";
+    }
+
+    @GetMapping("/api/learners")
     public List<Learner> index() {
         learnerService.getLearner();
         return learnerService.getLearner();

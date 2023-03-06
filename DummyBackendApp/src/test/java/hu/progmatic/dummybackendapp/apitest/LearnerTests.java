@@ -8,16 +8,16 @@ import static org.hamcrest.Matchers.*;
 
 public class LearnerTests {
 
-    String baseUrl = "http://localhost:8080/";
+    String baseUrl = "http://localhost:8080/api/";
 
     @Test
-    public void scoreBoard_UserController_hasBeenReachable() {
+    public void learners_LearnerController_hasBeenReachable() {
         when().get(baseUrl + "learners").then()
                 .statusCode(200);
     }
 
     @Test
-    public void scoreBoard_UserController_hasBeenReachableAndJson() {
+    public void learners_LearnerController_hasBeenReachableAndJson() {
         when().get(baseUrl + "learners").then()
                 .statusCode(200)
                 .assertThat()
@@ -25,13 +25,13 @@ public class LearnerTests {
     }
 
     @Test
-    public void scoreBoard_UserController_invalidAPI() {
+    public void learners_LearnerController_invalidAPI() {
         when().get(baseUrl + "dummy").then()
                 .statusCode(404);
     }
 
     @Test
-    public void scoreBoard_UserController_validContentSchema() {
+    public void learners_LearnerController_validContentSchema() {
         when().get(baseUrl + "learners").then()
                 .statusCode(200)
                 .and()
@@ -44,7 +44,7 @@ public class LearnerTests {
     }
 
     @Test
-    public void scoreBoard_UserController_validContentValues() {
+    public void learners_LearnerController_validContentValues() {
         String namePattern = "^[a-zA-Z]{3,7}$";
         when().get(baseUrl + "learners").then()
                 .statusCode(200)
